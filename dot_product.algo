@@ -1,0 +1,24 @@
+Procedure Dot_Product(v1, v2, ps)
+    // Calculate dot product and store it in ps
+    ps := 0
+    For i FROM 0 TO length(v1) - 1 DO
+        ps := ps + v1[i] * v2[i]
+    END_FOR
+End Procedure
+
+Algorithm Check_Orthogonality_With_Procedure(n)
+    For k FROM 1 TO n DO
+        // Input vectors v1 and v2
+        Read v1, v2  
+
+        // Call the procedure to calculate dot product
+        Dot_Product(v1, v2, ps)
+
+        // Check if the dot product is zero (orthogonal)
+        If ps = 0 THEN
+            Print "Vectors are orthogonal"
+        Else
+            Print "Vectors are not orthogonal"
+        END_IF
+    END_FOR
+End Algorithm

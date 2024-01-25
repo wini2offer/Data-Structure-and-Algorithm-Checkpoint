@@ -1,0 +1,22 @@
+def sum_of_distinct_elements(set1, set2):
+    # Combine the two sets to form a single array
+    combined_array = set1 + set2
+
+    # Use a set to store distinct elements
+    distinct_elements = set()
+
+    # Iterate through the combined array
+    for element in combined_array:
+        distinct_elements.add(element)
+
+    # Calculate the sum of distinct elements
+    result_sum = sum(distinct_elements)
+
+    return result_sum
+
+# Example usage:
+set1 = [3, 1, 7, 9]
+set2 = [2, 4, 1, 9, 3]
+
+output = sum_of_distinct_elements(set1, set2)
+print("Output:", output)
